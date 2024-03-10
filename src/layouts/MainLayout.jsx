@@ -1,10 +1,18 @@
 import { Outlet, Link } from "react-router-dom";
-import moon from '../assets/moon.svg'
-import sun from '../assets/sun.svg'
-import cartIcon from '../assets/cartIcon.svg'
+import moon from '../assets/moon.svg';
+import sun from '../assets/sun.svg';
+import cartIcon from '../assets/cartIcon.svg';
 import "./index.css";
+import { useState, useEffect } from "react";
 
 function MainLayout() {
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        const existingCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        setCounter(existingCartItems.length);
+    }, []); // Run only once when the component mounts
+
     return (
         <div>
             <header>
@@ -37,12 +45,11 @@ function MainLayout() {
                         </div>
                         <div className="nav-end">
                             <div className="mode">
-                                {/* <img src={moon} alt="" /> */}
                                 <img src={sun} alt="" />
                             </div>
                             <div className="cart-numbers">
                                 <img src={cartIcon} alt="" />
-                                <div className="counter">0</div>
+                                <div className="counter">{counter}</div>
                             </div>
                         </div>
                     </div>

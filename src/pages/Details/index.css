@@ -1,38 +1,118 @@
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-
-nav {
+.link-toback {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+.cardd {
+  display: flex;
+  gap: 64px;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
+.cardd-wrapper {
+  margin-top: 24px;
 }
 
-.product-image {
-  width: 50%;
-  float: left;
+.cardd img {
+  width: 486px;
+  height: 384px;
+  border-radius: 8px;
 }
 
-.product-details {
-  width: 50%;
-  float: right;
-  padding: 20px;
+.cardd-right {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
 }
 
-/* Add more styles for color options, add to cart button, etc. */
+.cardd-right h1 {
+  font-size: 30px;
+}
+
+.cardd-right h4 {
+  font-size: 20px;
+  color: #d6d7db;
+  margin-top: 8px;
+}
+
+.cardd-right p {
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.cardd-right h5 {
+  font-size: 16px;
+  margin-top: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  width: 525px;
+}
+
+.color-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.6px solid rgb(24, 25, 32);
+}
+
+.color-btn:focus {
+  border: 1.6px solid #bf95f9;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.circles {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.colors h3 {
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+label h6 {
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: inherit;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+select {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  width: 280px;
+  border-radius: 8px;
+  padding: 5px;
+  padding: 14px 40px 14px 16px;
+  border: 0.8px solid #bf95f9;
+  background-color: #272935;
+  color: white;
+}
+
+.btn {
+  width: 110px;
+  height: 46.4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(191, 149, 249);
+  color: rgb(40, 33, 49);
+}
+
+.btn:hover {
+  background-color: #aa73f7;
+}

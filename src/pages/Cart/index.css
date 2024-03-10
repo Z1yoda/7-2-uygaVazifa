@@ -1,0 +1,74 @@
+.empty-card h1 {
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+}
+
+.cart-card-wrapper {
+  gap: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.cart-card {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+.cart-card img {
+  width: 128px;
+  height: 128px;
+  border-radius: 8px;
+}
+
+.title-company {
+  margin-left: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-weight: 400;
+}
+
+.title-company h3,
+.title-company h4,
+.title-company p {
+  font-weight: 500;
+}
+
+.cart-form {
+  margin-left: 74px;
+}
+
+.amount {
+  width: 50px;
+  height: 24px;
+  color: white;
+}
+
+.cart-form p {
+  color: rgb(255, 122, 198);
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.price {
+  margin-left: 373px;
+}
+
+.color-span {
+  display: inline-block;
+}
+
+.color-btn {
+  display: inline-block;
+}
+
+.span-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
