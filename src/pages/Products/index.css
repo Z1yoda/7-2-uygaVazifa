@@ -1,0 +1,12 @@
+.card-body h2 {
+  text-transform: capitalize;
+}
+
+.loader {
+  width: 1088px;
+  height: 1088px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 450px;
+}
