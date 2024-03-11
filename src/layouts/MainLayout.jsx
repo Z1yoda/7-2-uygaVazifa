@@ -1,5 +1,4 @@
 import { Outlet, Link } from "react-router-dom";
-import moon from '../assets/moon.svg';
 import sun from '../assets/sun.svg';
 import cartIcon from '../assets/cartIcon.svg';
 import "./index.css";
