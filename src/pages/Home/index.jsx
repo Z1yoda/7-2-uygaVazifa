@@ -6,6 +6,7 @@ import carousel4 from '../../assets/carousel4.png'
 import lamp from '../../assets/lamp.png'
 import table from '../../assets/table.png'
 import bad from '../../assets/bad.png'
+import { NavLink } from 'react-router-dom'
 
 function Home() {
     return (
@@ -14,7 +15,7 @@ function Home() {
                 <div className="main-left">
                     <h1>We are changing the way people shop</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br /> Tempore repellat explicabo enim soluta temporibus asperiores <br /> aut obcaecati perferendis porro nobis.</p>
-                    <button>OUR PRODUCTS</button>
+                    <NavLink to="/products"><button style={{ cursor: "pointer" }}>OUR PRODUCTS</button></NavLink>
                 </div>
                 <div className="main-raight carousel">
                     <div className="carousel-item">

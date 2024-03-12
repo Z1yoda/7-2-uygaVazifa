@@ -55,10 +55,10 @@
   border-radius: 50%;
   border: 1.6px solid rgb(24, 25, 32);
 }
-
+/* 
 .color-btn:focus {
   border: 1.6px solid #bf95f9;
-}
+} */
 
 .colors {
   display: flex;

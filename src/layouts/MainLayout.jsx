@@ -1,16 +1,16 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 import sun from '../assets/sun.svg';
 import cartIcon from '../assets/cartIcon.svg';
 import "./index.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../App";
 
 function MainLayout() {
-    const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        const existingCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        setCounter(existingCartItems.length);
-    }, []); // Run only once when the component mounts
+    const cartCount = useContext(CartContext);
+    // useEffect(() => {
+    //     const existingCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    //     setCounter(existingCartItems.length);
+    // }, []); // Run only once when the component mounts
 
     return (
         <div>
@@ -46,10 +46,10 @@ function MainLayout() {
                             <div className="mode">
                                 <img src={sun} alt="" />
                             </div>
-                            <div className="cart-numbers">
+                            <NavLink to="/cart"> <div className="cart-numbers">
                                 <img src={cartIcon} alt="" />
-                                <div className="counter">{counter}</div>
-                            </div>
+                                <div className="counter">{cartCount.countCard}</div>
+                            </div></NavLink>
                         </div>
                     </div>
                 </div>

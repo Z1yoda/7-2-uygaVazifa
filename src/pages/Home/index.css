@@ -78,9 +78,10 @@
 
 .card-wrapper {
   padding-top: 48px;
-  width: 1088px;
-  display: grid;
-  grid-template-columns: 342.4px 342.4px 342.4px;
+  max-width: 1088px;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 342.4px 342.4px 342.4px; */
   justify-content: space-between;
 }
 

@@ -6,10 +6,26 @@ import Cart from './pages/Cart';
 import About from './pages/About';
 import Details from './pages/Details';
 import MainLayout from './layouts/MainLayout.jsx';
+import { createContext, useEffect, useState } from 'react';
+
+export const CartContext = createContext()
 
 function App() {
+  const [countCard, setCounCard] = useState(0)
+
+  useEffect(() => {
+    if (localStorage.getItem('products')) {
+      let products = JSON.parse(localStorage.getItem('products'))
+      let sum = 0;
+      products.forEach((pr) => {
+        sum += Number(pr.amount)
+      });
+      setCounCard(sum)
+    }
+  }, [])
+
   return (
-    <>
+    <CartContext.Provider value={{ countCard, setCounCard }}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
@@ -19,7 +35,7 @@ function App() {
           <Route path='/details/:id' element={<Details />}></Route>
         </Route>
       </Routes>
-    </>
+    </CartContext.Provider>
   );
 }
 

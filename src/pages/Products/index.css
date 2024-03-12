@@ -10,3 +10,44 @@
   align-items: center;
   margin: 450px;
 }
+.join {
+  margin-top: 64px;
+  justify-content: flex-end;
+  display: flex;
+  height: 48px;
+}
+
+.join-item {
+  border: 0.8px solid transparent; /* Add a unit to the border width, e.g., 0.8px */
+  background-color: #181920;
+  height: 48px;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  font-weight: 500;
+  animation-delay: 0;
+  animation-duration: 0.25s;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+  margin-left: -1;
+}
+
+.join-item:hover,
+.join-item:focus {
+  background-color: #09090c;
+}
+
+.join-item:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.join-item:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
